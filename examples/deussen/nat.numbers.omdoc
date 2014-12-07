@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE omdoc SYSTEM "../../dtd/omdoc.dtd" []>
+
+<omdoc id="nat.numbers.omdoc" catalogue="catalogue.omdoc" type="document" flat="f">
+
+<metadata>
+  <Title xmlns:dc="http://purl.org/DC"  xml:lang="en">Natural Numbers</Title>
+  <Creator xmlns:dc="http://purl.org/DC" role="ant">Barbara Schuett Kerber</Creator>
+  <Creator xmlns:dc="http://purl.org/DC" role="aut">Michael Kohlhase</Creator>
+</metadata>
+
+<catalogue>
+  <loc theory="basic.algebra" omdoc="basic.algebra.omdoc"/>
+</catalogue>
+
+<theory id="nat.numbers" flat="f">
+
+<symbol id="succ" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">Nachfolgerfunktion</commonname>
+<commonname  xml:lang="en">successor function</commonname>
+</symbol>
+
+<symbol id="associative" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">assoziativ</commonname>
+<commonname  xml:lang="en">associative</commonname>
+</symbol>
+
+<definition id="associative.def" for="associative" type="simple" flat="f">
+ <FMP><OMOBJ> 
+ 
+<OMBIND><OMS cd="fns1" name="lambda"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="G"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMV name="G"/></OMA></OMA></OMATP><OMV name="F"/></OMATTR></OMBVAR>
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="X"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="Y"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="Z"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="relation1" name="eq"/>
+<OMA brackets-hint="on"><OMV name="F"/>
+<OMA brackets-hint="on"><OMV name="F"/><OMV name="X"/><OMV name="Y"/></OMA><OMV name="Z"/></OMA>
+<OMA brackets-hint="on"><OMV name="F"/><OMV name="X"/>
+<OMA brackets-hint="on"><OMV name="F"/><OMV name="Y"/><OMV name="Z"/></OMA></OMA></OMA></OMBIND></OMBIND>
+  </OMOBJ></FMP>
+</definition>
+
+<symbol id="commutative" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">kommutativ</commonname>
+<commonname  xml:lang="en">commutative</commonname>
+</symbol>
+
+<definition id="commutative.def" for="commutative" type="simple" flat="f">
+ <FMP><OMOBJ> 
+   
+<OMBIND><OMS cd="fns1" name="lambda"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="G"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMV name="G"/></OMA></OMA></OMATP><OMV name="F"/></OMATTR></OMBVAR>
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="X"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="Y"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="relation1" name="eq"/>
+<OMA brackets-hint="on"><OMV name="F"/><OMV name="X"/><OMV name="Y"/></OMA>
+<OMA brackets-hint="on"><OMV name="F"/><OMV name="Y"/><OMV name="X"/></OMA></OMA></OMBIND></OMBIND>
+  </OMOBJ></FMP>
+</definition>
+
+<symbol id="subset" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">Teilmenge</commonname>
+<commonname  xml:lang="en">subset</commonname>
+</symbol>
+
+<definition id="subset.def" for="subset" type="simple" flat="f">
+ <FMP><OMOBJ>  
+<OMBIND><OMS cd="fns1" name="lambda"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="U"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="G"/></OMATTR></OMBVAR>
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="A"/></OMATP><OMV name="X"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="logic1" name="implies"/>
+<OMA brackets-hint="on"><OMV name="U"/><OMV name="X"/></OMA>
+<OMA brackets-hint="on"><OMV name="G"/><OMV name="X"/></OMA></OMA></OMBIND></OMBIND>
+  </OMOBJ></FMP>
+</definition>
+
+<symbol id="left-distributive" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">linksdistributiv</commonname>
+<commonname  xml:lang="en"> left distributive</commonname>
+</symbol>
+
+<definition id="left-distributive.def" for="left-distributive" type="simple" flat="f">
+ <FMP><OMOBJ>  
+<OMBIND><OMS cd="fns1" name="lambda"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="G"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMV name="G"/></OMA></OMA></OMATP><OMV name="F"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMV name="G"/></OMA></OMA></OMATP><OMV name="H"/></OMATTR></OMBVAR>
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="X"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="Y"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="Z"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="relation1" name="eq"/>
+<OMA brackets-hint="on"><OMV name="H"/><OMV name="X"/>
+<OMA brackets-hint="on"><OMV name="F"/><OMV name="Y"/><OMV name="Z"/></OMA></OMA>
+<OMA brackets-hint="on"><OMV name="F"/>
+<OMA brackets-hint="on"><OMV name="H"/><OMV name="X"/><OMV name="Y"/></OMA>
+<OMA brackets-hint="on"><OMV name="H"/><OMV name="X"/><OMV name="Z"/></OMA></OMA></OMA></OMBIND></OMBIND>
+  </OMOBJ></FMP>
+</definition>
+
+<symbol id="right-distributive" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">rechtsdistributiv</commonname>
+<commonname  xml:lang="en"> right distributive</commonname>
+</symbol>
+
+<definition id="right-distributive.def" for="right-distributive" type="simple" flat="f">
+ <FMP><OMOBJ>  
+<OMBIND><OMS cd="fns1" name="lambda"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="G"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMV name="G"/></OMA></OMA></OMATP><OMV name="F"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="G"/><OMV name="G"/></OMA></OMA></OMATP><OMV name="H"/></OMATTR></OMBVAR>
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="X"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="Y"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="G"/></OMATP><OMV name="Z"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="relation1" name="eq"/>
+<OMA brackets-hint="on"><OMV name="H"/>
+<OMA brackets-hint="on"><OMV name="F"/><OMV name="X"/><OMV name="Y"/></OMA><OMV name="Z"/></OMA>
+<OMA brackets-hint="on"><OMV name="F"/>
+<OMA brackets-hint="on"><OMV name="H"/><OMV name="X"/><OMV name="Z"/></OMA>
+<OMA brackets-hint="on"><OMV name="H"/><OMV name="Y"/><OMV name="Z"/></OMA></OMA></OMA></OMBIND></OMBIND>
+  </OMOBJ></FMP>
+</definition>
+
+<symbol id="empty-set" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">leere Menge</commonname>
+<commonname  xml:lang="en">empty set</commonname>
+</symbol>
+<definition id="empty-set.def" for="empty-set" type="implicit" flat="f">
+<FMP><OMOBJ>  
+
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="A"/></OMATP><OMV name="X"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="logic1" name="not"/><OMS cd="basic.algebra" name="empty-set"/><OMV name="A"/></OMA></OMBIND>
+ </OMOBJ></FMP>
+</definition>
+
+<symbol id="non-empty" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">nicht-leer</commonname>
+<commonname  xml:lang="en">non-empty</commonname>
+</symbol>
+<definition id="non-empty.def" for="non-empty" type="simple" flat="f">
+<FMP><OMOBJ>  
+
+<OMBIND><OMS cd="fns1" name="lambda"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="U"/></OMATTR></OMBVAR>
+<OMA brackets-hint="on"><OMS cd="basic.algebra" name="notequal"/><OMV name="U"/><OMS cd="basic.algebra" name="empty-set"/></OMA></OMBIND>
+ </OMOBJ></FMP>
+</definition>
+
+<symbol id="empty" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">leer</commonname>
+<commonname  xml:lang="en">empty</commonname>
+</symbol>
+<definition id="empty.def" for="empty" type="simple" flat="f">
+<FMP><OMOBJ>  
+
+<OMBIND><OMS cd="fns1" name="lambda"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="U"/></OMATTR></OMBVAR>
+<OMA brackets-hint="on"><OMS cd="relation1" name="eq"/><OMV name="U"/><OMS cd="basic.algebra" name="empty-set"/></OMA></OMBIND>
+ </OMOBJ></FMP>
+</definition>
+
+<symbol id="singleton" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">einelementige Menge</commonname>
+<commonname  xml:lang="en">singleton</commonname>
+</symbol>
+<definition id="singleton.def" for="singleton" type="simple" flat="f">
+<FMP><OMOBJ>  
+
+<OMBIND><OMS cd="fns1" name="lambda"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="U"/></OMATTR></OMBVAR>
+<OMA brackets-hint="on"><OMS cd="logic1" name="and"/>
+<OMBIND><OMS cd="quant1" name="exists"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="A"/></OMATP><OMV name="X"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMV name="U"/><OMV name="X"/></OMA></OMBIND>
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="U"/></OMATP><OMV name="X"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="U"/></OMATP><OMV name="Y"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="relation1" name="eq"/><OMV name="X"/><OMV name="Y"/></OMA></OMBIND></OMA></OMBIND>
+ </OMOBJ></FMP>
+</definition>
+
+
+<symbol id="comp" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">Komposition von Funktionen</commonname>
+<commonname  xml:lang="en">Composition of functions</commonname>
+</symbol>
+<definition id="comp.def" for="comp" type="implicit" flat="f">
+<FMP><OMOBJ>  
+
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="B"/><OMV name="A"/></OMA></OMATP><OMV name="G"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="C"/><OMV name="B"/></OMA></OMATP><OMV name="F"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="A"/></OMATP><OMV name="X"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="relation1" name="eq"/>
+<OMA brackets-hint="on">
+<OMA brackets-hint="on"><OMS cd="basic.algebra" name="comp"/><OMV name="F"/><OMV name="G"/></OMA><OMV name="X"/></OMA>
+<OMA brackets-hint="on"><OMV name="F"/>
+<OMA brackets-hint="on"><OMV name="G"/><OMV name="X"/></OMA></OMA></OMA></OMBIND>
+ </OMOBJ></FMP>
+</definition>
+
+<symbol id="set-difference" kind="object" scope="global" flat="f">
+<commonname  xml:lang="de">einelementige Menge</commonname>
+<commonname  xml:lang="en">comp</commonname>
+</symbol>
+<definition id="set-difference.def" for="set-difference" type="implicit" flat="f">
+<FMP><OMOBJ>  
+
+<OMBIND><OMS cd="quant1" name="forall"/><OMBVAR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMA brackets-hint="on"><OMS cd="mltt" name="funtype"/><OMV name="A"/><OMS cd="mltt" name="bool"/></OMA></OMATP><OMV name="G"/></OMATTR><OMATTR><OMATP><OMS cd="mltt" name="type"/><OMV name="A"/></OMATP><OMV name="X"/></OMATTR></OMBVAR><OMA brackets-hint="on"><OMS cd="logic1" name="equivalent"/>
+<OMA brackets-hint="on"><OMS cd="basic.algebra" name="set-difference"/><OMV name="G"/><OMV name="H"/><OMV name="X"/></OMA>
+<OMA brackets-hint="on"><OMS cd="logic1" name="and"/>
+<OMA brackets-hint="on"><OMV name="G"/><OMV name="X"/></OMA>
+<OMA brackets-hint="on"><OMS cd="logic1" name="not"/>
+<OMA brackets-hint="on"><OMV name="H"/><OMV name="X"/></OMA></OMA></OMA></OMA></OMBIND>
+ </OMOBJ></FMP>
+</definition>
+
+</theory>
+</omdoc>
